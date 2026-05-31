@@ -282,7 +282,7 @@ function ReviewUI({ cafe, tableNumber, slug }: { cafe: CafeProfile; tableNumber:
             textAlign:  "center",
           }}>
             <p style={{ margin: 0, fontSize: 12, fontWeight: 700, color: "#7B4F00", letterSpacing: 1, textTransform: "uppercase", opacity: 0.7 }}>
-              Table {tableNumber} · {cafe.business_name}
+              {tableNumber > 0 ? `Table ${tableNumber} · ` : ""}{cafe.business_name}
             </p>
             <p style={{ margin: "6px 0 0", fontSize: 22, fontWeight: 900, color: "#3E2000" }}>
               How was your experience?

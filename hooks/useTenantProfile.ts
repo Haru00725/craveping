@@ -41,8 +41,8 @@ export function useTenantProfile(): TenantState {
       return;
     }
 
-    // ── Guard: table must be a positive integer ───────────────────────────────
-    if (!rawTable || isNaN(tableNumber) || tableNumber < 1) {
+    // ── Table is optional — only validate if present in URL ──────────────────
+    if (rawTable && (isNaN(tableNumber) || tableNumber < 1)) {
       setError("invalid_table");
       setLoading(false);
       return;
