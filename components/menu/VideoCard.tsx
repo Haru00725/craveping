@@ -32,7 +32,7 @@ export function VideoCard({ dish, isActive, onAddToCart, brandColor }: VideoCard
       <video
         ref={videoRef}
         src={dish.video_url}
-        poster={dish.thumbnail_url}
+        poster={dish.thumbnail_url ?? undefined}
         loop
         muted
         playsInline // Crucial for iOS autoplay
