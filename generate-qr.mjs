@@ -57,7 +57,7 @@ async function generateQR() {
   await fs.mkdir(outputDir, { recursive: true });
 
   // URL encodes just the cafe — no table number needed for a single shared QR
-  const url      = `${domain}/review?cafe=${cafeSlug}`;
+  const url      = `${domain}/menu?cafe=${cafeSlug}`;
   const filename = path.join(outputDir, `${cafeSlug}.png`);
   const size     = 1200;
 
